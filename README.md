@@ -1,20 +1,16 @@
-# sandbox
-trying react server side, node express, mongoDB/redis
+# Client Side boilerplate
 
 ## develop
 ```
 npm i
-sudo mongod
-redis-server
 npm run dev
 ```
 
 ## production
 ```
 npm i
-sudo mongod
-redis-server
+npm run build
 npm run start
 ```
 
-Open in browser http://localhost:4004
+Open in browser http://localhost:5000
