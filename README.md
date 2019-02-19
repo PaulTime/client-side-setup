@@ -5,6 +5,7 @@
 npm i
 npm run dev
 ```
+Open in browser http://localhost:3000
 
 ## production
 ```
