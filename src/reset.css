@@ -10,17 +10,13 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video, button {
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
-}
-
-body {
-    line-height:1;
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
 }
 
 article,aside,details,figcaption,figure,
@@ -99,4 +95,18 @@ button {
 html, body, html * {
     font-family: Noto Sans, Noto Serif, sans-serif;
     box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    line-height: 1;
+    min-height: 100%;
+    display: flex;
+}
+
+#root {
+    flex: 1 1 auto;
 }

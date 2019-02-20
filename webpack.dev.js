@@ -36,6 +36,9 @@ module.exports = {
     inline: true,
     hotOnly: true,
     host: '0.0.0.0',
+    historyApiFallback: {
+      index: dotenv.PUBLIC_PATH,
+    },
   },
 
   resolve: {
@@ -63,7 +66,10 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
-            options: {},
+            options: {
+              name: 'static/[path][name].[ext]',
+              context: 'src',
+            },
           },
         ],
       },

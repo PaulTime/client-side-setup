@@ -17,7 +17,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
     publicPath: dotenv.PUBLIC_PATH,
-    // publicPath: '/', // if you want to check it locally
     filename: 'static/js/[name].[chunkhash:8].js',
     chunkFilename: 'static/js/[name].[chunkhash:8].chunk.js',
   },
@@ -66,7 +65,8 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: '[hash][name].[ext]',
+              name: 'static/[path][name].[hash:8].[ext]',
+              context: 'src',
             },
           },
         ],
@@ -83,8 +83,8 @@ module.exports = {
       'process.env': JSON.stringify(dotenv),
     }),
     new MiniCssExtractPlugin({
-      filename: 'static/css/[name].css',
-      chunkFilename: 'static/css/[id].css',
+      filename: 'static/css/[name].[hash:8].css',
+      chunkFilename: 'static/css/[id].[hash:8].css',
     }),
   ],
 };
