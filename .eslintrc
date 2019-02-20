@@ -40,6 +40,8 @@
     ],
     "react/jsx-filename-extension": 0,
     "react/prefer-stateless-function": 0,
+    "import/no-named-as-default": 0,
+    "import/no-named-as-default-member": 0,
     "no-bitwise": "error",
     "object-curly-spacing": [
       "error",
